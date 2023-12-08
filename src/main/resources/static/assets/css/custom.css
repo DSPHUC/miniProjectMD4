@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.icon-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: inherit;
+}
