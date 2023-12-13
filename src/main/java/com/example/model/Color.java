@@ -1,5 +1,6 @@
 package com.example.model;
 
+import com.example.model.dto.ColorResDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,4 +22,8 @@ public class Color {
     private Long id;
 
     private String name;
+    public ColorResDTO toColorResDTO(){
+        return new ColorResDTO()
+                .setName(name);
+    }
 }

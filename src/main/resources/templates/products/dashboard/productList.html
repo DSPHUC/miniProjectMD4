@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="layout/head"/>
+</head>
+<body>
+<div id="root">
+    <th:block th:replace="layout/dashboard/body-head"></th:block>
+    <div class="container d-flex py-2">
+        <th:block th:replace="layout/dashboard/listMenu"></th:block>
+        <div class="row">
+            <!--            content-->
+            <div class="container d-flex">
+                <div class="container">
+                    <h5> Product List Manager</h5>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class=" col-md-12 d-flex align-items-center">
+                    <div class=" d-flex align-items-center">
+                        <span class="mx-3">Field</span>
+                        <select class="form-select form-select-sm">
+                            <option value="idProduct" selected>id</option>
+                            <option value="nameProduct">name</option>
+                            <option value="companyProduct">company</option>
+                            <option value="categoryProduct">category</option>
+                            <option value="priceProduct">price</option>
+                            <option value="colorProduct">color</option>
+                        </select>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="mx-3">Order</span>
+                        <select class="form-select form-select-sm">
+                            <option value="ads" selected>Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table">
+                    <h5>list product </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/assets/bootstrap/v5.3.2/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="/assets/bootstrap/v5.3.2/css/bootstrap.min.css">
+</html>

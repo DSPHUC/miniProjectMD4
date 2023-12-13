@@ -1,5 +1,6 @@
 package com.example.model;
 
+import com.example.model.dto.CategoryResDTO;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.Accessors;
@@ -18,4 +19,8 @@ public class Category {
     private Long id;
 
     private String name;
+    public CategoryResDTO toCategoryResDTO(){
+        return new CategoryResDTO()
+                .setName(name);
+    }
 }

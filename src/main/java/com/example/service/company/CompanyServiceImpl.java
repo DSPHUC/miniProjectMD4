@@ -17,21 +17,12 @@ public class CompanyServiceImpl implements ICompanyService {
 
     @Override
     public List<Company> findAll() {
-        return companyRepository
-                .findAll()
-               /* .stream()
-                .map(
-                        company -> new CompanyResponse(
-                                company.getId().toString()
-                                ,company.getName()))
-                .collect(
-                        Collectors
-                                .toList())*/;
+        return companyRepository.findAll();
     }
 
     @Override
     public Optional<Company> findById(Long id) {
-        return Optional.empty();
+        return companyRepository.findById(id);
     }
 
     @Override

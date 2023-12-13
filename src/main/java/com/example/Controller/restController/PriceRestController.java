@@ -1,7 +1,6 @@
 package com.example.Controller.restController;
 
 import com.example.model.Price;
-import com.example.model.Product;
 import com.example.service.price.PriceServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,5 +22,4 @@ public class PriceRestController {
         List<Price> prices = priceService.findAll();
         return new ResponseEntity<>(prices, HttpStatus.OK);
     }
-
 }

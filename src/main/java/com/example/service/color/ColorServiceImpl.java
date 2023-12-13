@@ -18,21 +18,12 @@ public class ColorServiceImpl implements IColorService {
 
     @Override
     public List<Color> findAll() {
-        return colorRepository
-                .findAll()
-               /* .stream()
-                .map(
-                        color -> new ColorResponse(
-                                color.getId().toString()
-                                ,color.getName()))
-                .collect(
-                        Collectors
-                                .toList())*/;
+        return colorRepository.findAll();
     }
 
     @Override
     public Optional<Color> findById(Long id) {
-        return Optional.empty();
+        return colorRepository.findById(id);
     }
 
     @Override

@@ -15,26 +15,15 @@ public class CategoryServiceImpl implements ICategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-
     @Override
     public List<Category> findAll() {
-        return categoryRepository
-                .findAll()
-               /* .stream()
-                .map(
-                        category -> new CategoryResponse(
-                                category.getId().toString()
-                                ,category.getName()))
-                .collect(
-                        Collectors
-                                .toList())*/;
+        return categoryRepository.findAll();
     }
 
     @Override
     public Optional<Category> findById(Long id) {
-        return Optional.empty();
+        return categoryRepository.findById(id);
     }
-
 
     @Override
     public void save(Category category) {

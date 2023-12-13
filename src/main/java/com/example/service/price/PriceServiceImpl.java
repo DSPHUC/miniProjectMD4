@@ -16,12 +16,12 @@ public class PriceServiceImpl implements IPriceService{
     private PriceRepository priceRepository;
     @Override
     public List<Price> findAll() {
-        return null;
+        return priceRepository.findAll();
     }
 
     @Override
     public Optional<Price> findById(Long id) {
-        return Optional.empty();
+        return priceRepository.findById(id);
     }
 
     @Override

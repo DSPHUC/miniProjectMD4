@@ -1,7 +1,6 @@
 package com.example.Controller.restController;
 
 import com.example.model.Company;
-import com.example.model.Price;
 import com.example.service.company.CompanyServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;

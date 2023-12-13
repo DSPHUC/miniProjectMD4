@@ -1,8 +1,12 @@
 package com.example.service.product;
 
 import com.example.model.Product;
+import com.example.model.dto.FilterDTO;
+import com.example.model.dto.ProductResDTO;
 import com.example.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,30 +30,14 @@ public class ProductServiceImpl implements IProductService {
     private CategoryRepository categoryRepository;
 
 
-
-
     @Override
     public List<Product> findAll() {
-        return productRepository
-                .findAll();
-//                .stream()
-//                .map(
-//                        product -> new Product(
-//                                product.getId().toString()
-//                                ,product.getName()
-//                                ,product.getCategory().getId().toString()
-//                                ,product.getColor().getId().toString()
-//                                ,product.getCompany().getId().toString()
-//                                ,product.getPrice().toString()
-//                                ))
-//                .collect(
-//                        Collectors
-//                                .toList());
+        return productRepository.findAll();
     }
 
     @Override
     public Optional<Product> findById(Long id) {
-        return Optional.empty();
+        return productRepository.findById(id);
     }
 
     @Override
@@ -60,5 +48,11 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public void update(Long id, Product product) {
 
+    }
+
+    @Override
+    public Page<ProductResDTO> showAllProduct(FilterDTO filterDTO, Pageable pageable) {
+
+        return productRepository.showAllProduct(filterDTO,pageable);
     }
 }
